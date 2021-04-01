@@ -1,0 +1,26 @@
+<div class="grid-container">
+    <form class="form" (ngSubmit)="onAdd()" [formGroup]="fishForm">
+        <div class="form-group">
+            <label class="form-group__label">Species:</label>
+            <input type="text" class="form-group__input" formControlName="species">
+        </div>
+        <div class="form-group">
+            <label class="form-group__label">Catchee:</label>
+            <input type="text" class="form-group__input" formControlName="catchee">
+        </div>
+        <div class="form-group">
+            <label class="form-group__label">Weight:</label>
+            <input type="number" class="form-group__input" formControlName="weight">
+        </div>
+        <div class="form-group">
+            <label class="form-group__label">Length:</label>
+            <input type="number" class="form-group__input" formControlName="length">
+        </div>
+        <div class="form-group">
+            <label class="form-group__label">Date Caught:</label>
+            <input type="date" class="form-group__input" formControlName="dateCaught">
+        </div>
+        <button class="btn-add">Add</button>
+        <button type="button" class="btn-cancel">Cancel</button>
+    </form>
+</div>

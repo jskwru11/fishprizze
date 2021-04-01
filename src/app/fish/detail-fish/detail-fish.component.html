@@ -1,0 +1,25 @@
+<div class="grid-container">
+    <div class="card" *ngIf="fish$ | async as fish">
+        <div class="card-header">
+            <button (click)="onSave() "class="btn btn-success">Save</button>
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="onSave()" [formGroup]="fishForm">
+                <label for="">Species: </label>
+                <input type="text" class="form-control" formControlName="species">
+
+                <label for="">Catchee: </label>
+                <input type="text" class="form-control" formControlName="catchee">
+
+                <label for="">Weight: </label>
+                <input type="number" class="form-control" formControlName="weight">
+
+                <label for="">Length: </label>
+                <input type="number" class="form-control" formControlName="length">
+
+                <label for="">Date Caught: </label>
+                <input type="date" class="form-control" formControlName="dateCaught">
+            </form>
+        </div>
+    </div>
+</div>

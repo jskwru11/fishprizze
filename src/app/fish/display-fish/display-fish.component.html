@@ -1,0 +1,52 @@
+<div class="grid-container">
+    <!-- header area start -->
+    <header class="header">
+        <div class="header__left">
+            <h3 class="logo">FishPrizze</h3>
+            <a href="#"><fa-icon [icon]="['fas','bars']" size="2x"></fa-icon></a>
+        </div>
+        <div class="header__right">
+            <a href="#" class="logout-btn">Logout</a>
+        </div>
+    </header>
+    <!-- header area end -->
+    <!-- sidebar area start -->
+    <div class="sidebar">
+        <div class="avatar">
+            <img src="/assets/michael.jpg" alt="" class="avatar__img">
+            <h4>Jessica</h4>
+        </div>
+        <a href="#"><fa-icon [icon]="['fas','desktop']"></fa-icon><span>Dashboard</span></a>
+        <a href="#"><fa-icon [icon]="['fas','cogs']"></fa-icon><span>Components</span></a>
+        <a href="#"><fa-icon [icon]="['fas','table']"></fa-icon><span>Tables</span></a>
+        <a href="#"><fa-icon [icon]="['fas','th']"></fa-icon><span>Forms</span></a>
+        <a href="#"><fa-icon [icon]="['fas','info-circle']"></fa-icon><span>About</span></a>
+        <a href="#"><fa-icon [icon]="['fas','sliders-h']"></fa-icon><span>Settings</span></a>
+    </div>
+    <!-- sidebar area end -->
+
+    <!-- content area start -->
+    <section class="main">
+        <div class="error" *ngIf="errorMessage$ | async as errorMessage">{{errorMessage}}</div>
+        <div class="card" *ngFor="let f of fish$ | async">
+            <div class="card__img"></div>
+            <div class="card__body">
+                <h2 class="card__body-title">{{f.species}}</h2>
+                <div class="card__body-date">{{f.dateCaught | date: 'mediumDate'}}</div>
+                <p class="card__body-catchee"><span>Catchee: </span>{{f.catchee}}</p>
+                <p class="card__body-weight"><span>Weight: </span>{{f.weight}}lbs</p>
+                <p class="card__body-length"><span>Length: </span>{{f.length}}inches</p>
+            </div>
+            <div class="card__footer">
+                <div class="card__footer-edit">
+                    <button (click)="onEdit(f._id)" class="btn">Edit</button>
+                </div>
+                <div class="card__footer-delete">
+                    <button (click)="onDelete(f._id)" class="btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- content area end -->
+
+</div>

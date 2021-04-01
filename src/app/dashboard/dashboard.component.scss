@@ -1,0 +1,80 @@
+@import './../../styles.scss';
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 150px 1fr 1fr 150px;
+    grid-template-rows: 50px minmax(250px, 1fr) minmax(250px, 1fr) 50px;
+    grid-template-areas: "nav nav nav nav"
+                         "side main main sub"
+                         " side main main sub"
+                         "footer footer footer footer";
+}
+
+.nav {
+ grid-area: nav;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: $clr-primary;
+
+ & .logo {
+    font-size: 18px;
+ }
+
+
+ &__list-left {
+    display: flex;
+    margin-right: auto;
+    list-style: none;
+    font-size: 13px;
+
+    &item {
+        & a {
+            padding: 20px;
+            text-decoration: none;
+        }
+     }
+ }
+
+ &__list-right {
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+
+     &item {
+        & a {
+            padding: 20px;
+            text-decoration: none;
+        }
+     }
+ }
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    &__card {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    text-transform: uppercase;
+
+    &-text {
+        color: $clr-primary;
+    }
+}

@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+/* SCSS Variables */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$primary-color: rgb(237, 237, 237);
+$dark-color: #333;
+$light-color: #fff;
+$shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+$clr-primary: #5930ff;
+$clr-primary-hover: #29e6a7;
+$clr-primary-dark: #039d69;
+$clr-gray100: #f9fbff;
+$clr-gray150: #f4f6fb;
+$clr-gray200: #eef1f6;
+$clr-gray300: #e1e5ee;
+$clr-gray400: #767b91;
+$clr-gray500: #4f546c;
+$main-font: #3c92cc;
+  
+  body,
+  html {
+    min-height: 100vh;
+    box-sizing: border-box;
+    // font-size: 62.5%; /* 10px/16px = 62.5% -> 1rem = 10px */
+    font-size: 10px;
+    font-family: 'roboto';
+    background-color: $primary-color;
+  }

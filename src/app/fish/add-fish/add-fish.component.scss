@@ -1,0 +1,50 @@
+@import './../../../styles.scss';
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: '. . . .'
+                        '. form form .'
+                        '. form form .'
+                        '. . . .';
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    grid-area: form;
+
+    & .form-group {
+
+        &__label {
+            color: $main-font;
+            margin-right: 1rem;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    
+        &__input {
+            border-radius: 18px;
+            width: 90%;
+        }
+    }
+
+    & .btn-add {
+        background-color: green;
+        padding: 5px;
+        color: white;
+        border-radius: 6px;
+        margin: 0 10px;
+    }
+
+    & .btn-cancel {
+        background-color: red;
+        padding: 5px;
+        color: white;
+        border-radius: 6px;
+    }
+}
+

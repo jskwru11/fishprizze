@@ -1,0 +1,156 @@
+@import "./../../../styles.scss";
+
+.grid-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "form image"
+}
+
+.grid-form {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px;
+
+    & .logo {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3rem;
+        color: $main-font;
+        margin: 100px 0 110px 0;
+    }
+
+    & .form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.grid-image {
+    grid-area: image;
+    min-height: 100vh;
+    background: url(./../../assets/images/tuna.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .logo {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 4rem;
+        color: white;
+        margin: 100px 0 110px 0;
+    }
+
+    & p {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 4rem;
+        color: white;
+        margin: 100px 0 110px 0;        
+    }
+}
+
+// input {
+//     padding: 10px;
+//     margin: 10px 0;
+//     background-color: white;
+// }
+
+button {
+    background-color: $main-font;
+    color: white;
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.line {
+    width: 75px;
+    border-bottom: solid black 1px;
+}
+
+.lower-lines {
+    display: flex;
+    justify-content: center;
+}
+
+.or {
+    margin: 0 5px;
+    font-size: 1.3rem;
+}
+
+.account {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.social {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.3rem;
+}
+
+.forgot {
+    text-align: right;
+    font-size: 1.3rem;
+}
+
+.signup {
+    text-decoration: none;
+    color: $main-font;
+    font-size: 1.5rem;
+}
+
+.icon-block {
+    display:flex;
+    justify-content: center;
+
+    & .icon1 {
+        margin: 0 5px;
+        width:50px;
+        height:50px;
+        border-radius: 100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+    }
+    & .icon2 {
+        margin: 0 5px;
+        width:50px;
+        height:50px;
+        border-radius: 100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+    }
+    & .icon3 {
+        margin: 0 5px;
+        width:50px;
+        height:50px;
+        border-radius: 100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+    }
+    & .icon4 {
+        margin: 0 5px;
+        width:50px;
+        height:50px;
+        border-radius: 100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+    }
+    
+}
