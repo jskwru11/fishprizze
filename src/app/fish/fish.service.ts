@@ -55,7 +55,6 @@ export class FishService {
   }
 
   updateFish(id: string, payload: Fish) {
-    console.log(`fish payload: ${payload}`)
     return this.http.patch(`${this.baseUrl}fish/${id}`, payload)
   }
 

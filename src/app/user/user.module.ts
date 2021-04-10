@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { EffectsModule } from '@ngrx/effects';
 
 import { UserRoutingModule } from './user-routing.module';
 import { AddUserComponent } from './add-user/add-user.component';
@@ -11,7 +12,8 @@ import { DetailUserComponent } from './detail-user/detail-user.component';
   declarations: [AddUserComponent, DisplayUserComponent, DetailUserComponent],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    EffectsModule.forFeature([])
   ]
 })
 export class UserModule { }

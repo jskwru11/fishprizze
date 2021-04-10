@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { tap } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 import { User } from './../models/user.model';
 
@@ -34,7 +34,7 @@ export class AuthService {
       localStorage.setItem('token', userData.token);
       localStorage.setItem('user', JSON.stringify(userData.data.user));
 
-    }));
+    }),map(user => user.data.user));
   }
 
   login(payload) {
@@ -43,7 +43,7 @@ export class AuthService {
 
       localStorage.setItem('token', user.token);
 
-    }));
+    }), map(user => user.token));
   }
 
   isAuthenticated() {
@@ -52,8 +52,8 @@ export class AuthService {
     if (!token) return false;
 
     return true;
-    
-    
+
+
   }
 
   logout() {
